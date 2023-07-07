@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 // Verificar si se recibió una solicitud POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Consulta para obtener todos los registros de la tabla "eventos"
-    $sql = "SELECT * FROM eventos";
+    $sql = "SELECT * FROM eventos WHERE isCompleted = 0 ";
 
     // Ejecutar la consulta
     $result = $conn->query($sql);
